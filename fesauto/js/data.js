@@ -8,12 +8,12 @@ const AUDIT = {
   },
 
   kpi: [
-    { id: "leads", label: "Лидов в CRM за год", value: 33740, suffix: "", color: "#5b8cff", icon: "users", note: "выгрузка Битрикс24" },
-    { id: "sales", label: "Фактических продаж", value: 3357, suffix: "", color: "#34d399", icon: "car", note: "9,9% от всех лидов" },
-    { id: "funnel", label: "Воронка (продажи + конверсия)", value: 8205, suffix: "", color: "#22d3ee", icon: "funnel", note: "24,3% от всех лидов" },
-    { id: "garbage", label: "Мусор (СПАМ + некачественные)", value: 14988, suffix: "", color: "#f87171", icon: "trash", note: "44,4% — почти половина!" },
-    { id: "budget", label: "Бюджет классифайдов", value: 4070070, suffix: " ₽", color: "#fbbf24", icon: "wallet", note: "Авито + Дром / год" },
-    { id: "cpl", label: "Ср. цена лида (Авито)", value: 371, prefix: "₽ ", suffix: "", color: "#a78bfa", icon: "tag", note: "Дром — 855 ₽" }
+    { id: "leads", label: "Лидов в CRM за год", value: 33740, suffix: "", color: "#DE0E14", icon: "users", note: "выгрузка Битрикс24" },
+    { id: "sales", label: "Фактических продаж", value: 3357, suffix: "", color: "#F5F5F5", icon: "car", note: "9,9% от всех лидов" },
+    { id: "funnel", label: "Воронка (продажи + конверсия)", value: 8205, suffix: "", color: "#A3ACBA", icon: "funnel", note: "24,3% от всех лидов" },
+    { id: "garbage", label: "Мусор (СПАМ + некачественные)", value: 14988, suffix: "", color: "#7C0B10", icon: "trash", note: "44,4% — почти половина!" },
+    { id: "budget", label: "Бюджет классифайдов", value: 4070070, suffix: " ₽", color: "#DE0E14", icon: "wallet", note: "Авито + Дром / год" },
+    { id: "cpl", label: "Ср. цена лида (Авито)", value: 371, prefix: "₽ ", suffix: "", color: "#F5F5F5", icon: "tag", note: "Дром — 855 ₽" }
   ],
 
   months: {

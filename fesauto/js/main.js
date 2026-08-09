@@ -95,7 +95,7 @@
     ["Канал", "Расходы, ₽", "Контакты", "₽/контакт"],
     AUDIT.budget.avito.map(a => ({
       cells: [a.name, C.fmtMoney(a.spend), C.fmtNum(a.contacts), C.fmtNum(a.cpl)],
-      color: "#5b8cff"
+      color: "#DE0E14"
     })),
     { rightAlign: ["Расходы, ₽", "Контакты", "₽/контакт"], totalRow: 3, dots: true, dotCol: "Канал" }
   );
@@ -106,7 +106,7 @@
     ["Канал", "Расходы, ₽", "Просмотры", "Звонки"],
     AUDIT.budget.drom.map(d => ({
       cells: [d.name, C.fmtMoney(d.spend), C.fmtNum(d.views), C.fmtNum(d.calls)],
-      color: "#60a5fa"
+      color: "#A3ACBA"
     })),
     { rightAlign: ["Расходы, ₽", "Просмотры", "Звонки"], totalRow: 3, dots: true, dotCol: "Канал" }
   );
@@ -114,7 +114,7 @@
   C.hBarChart(
     document.getElementById("freeChart"),
     "Бесплатные/картографические каналы: конверсия воронки, %",
-    AUDIT.freeChannels.map(f => ({ name: f.name, funnel: f.funnel, color: "#34d399" })),
+    AUDIT.freeChannels.map(f => ({ name: f.name, funnel: f.funnel, color: "#DE0E14" })),
     { valueKey: "funnel", labelWidth: 170 }
   );
 
@@ -127,8 +127,8 @@
     const data = AUDIT.traffic[siteKey];
     trafficChart.innerHTML = "";
     trafficCities.innerHTML = "";
-    C.hBarChart(trafficChart, `Источники визитов (всего ${C.fmtNum(data.total)})`, data.items.map(([name, val]) => ({ name, leads: val, color: "#5b8cff" })));
-    C.hBarChart(trafficCities, "Топ городов", data.cities.map(([name, val]) => ({ name, leads: val, color: "#22d3ee" })));
+    C.hBarChart(trafficChart, `Источники визитов (всего ${C.fmtNum(data.total)})`, data.items.map(([name, val]) => ({ name, leads: val, color: "#DE0E14" })));
+    C.hBarChart(trafficCities, "Топ городов", data.cities.map(([name, val]) => ({ name, leads: val, color: "#A3ACBA" })));
   }
   trafficTabs.addEventListener("click", e => {
     const btn = e.target.closest(".tab");
@@ -146,7 +146,7 @@
     ["Канал", "Объявления", "Просмотры", "Контакты", "Расходы, ₽", "₽/контакт"],
     AUDIT.asp.channels.map(c => ({
       cells: [c.name, c.ads, C.fmtNum(c.views), c.contacts, C.fmtMoney(c.spend), C.fmtNum(c.cpl)],
-      color: "#22d3ee"
+      color: "#DE0E14"
     })),
     { rightAlign: ["Объявления", "Просмотры", "Контакты", "Расходы, ₽", "₽/контакт"], totalRow: 2, dots: true, dotCol: "Канал" }
   );
@@ -223,8 +223,8 @@
 
   window.addEventListener("scroll", () => {
     nav.style.background = window.scrollY > 40
-      ? "rgba(10, 14, 26, 0.92)"
-      : "rgba(10, 14, 26, 0.6)";
+      ? "rgba(0, 0, 0, 0.92)"
+      : "rgba(0, 0, 0, 0.6)";
     let current = "";
     document.querySelectorAll("section").forEach(sec => {
       if (window.scrollY >= sec.offsetTop - 140) current = sec.id;

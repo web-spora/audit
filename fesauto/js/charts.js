@@ -58,7 +58,7 @@ function hBarChart(container, title, items, opts = {}) {
     const val = it[valueKey];
     const frac = max > 0 ? val / max : 0;
     const y = i * rowH + 14;
-    const color = it.color || opts.color || "#5b8cff";
+    const color = it.color || opts.color || "#DE0E14";
 
     const lbl = svgEl("text", { x: 0, y: y + 14, class: "bar-label", "text-anchor": "start" });
     lbl.textContent = it.name;
@@ -102,8 +102,8 @@ function vBarChart(container, title, labels, values, opts = {}) {
 
   const svg = svgEl("svg", { viewBox: `0 0 ${width} ${height}`, width: "100%", height });
   const grad = svgEl("linearGradient", { id: "vbar-grad", x1: 0, y1: 0, x2: 0, y2: 1 });
-  const st1 = svgEl("stop", { offset: "0%", "stop-color": "#5b8cff" });
-  const st2 = svgEl("stop", { offset: "100%", "stop-color": "#22d3ee" });
+  const st1 = svgEl("stop", { offset: "0%", "stop-color": "#DE0E14" });
+  const st2 = svgEl("stop", { offset: "100%", "stop-color": "#DE0E14" });
   grad.appendChild(st1); grad.appendChild(st2);
   svg.appendChild(grad);
 
@@ -279,7 +279,10 @@ function dataTable(container, title, columns, rows, opts = {}) {
     tbody.appendChild(tr);
   });
   table.appendChild(tbody);
-  container.appendChild(table);
+  const wrap = document.createElement("div");
+  wrap.className = "tbl-wrap";
+  wrap.appendChild(table);
+  container.appendChild(wrap);
 }
 
 // Экспорт для main.js
