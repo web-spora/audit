@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FesAuto — Презентация аудита маркетинга 2026</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Фон-декор -->
+<div class="bg-glow glow-a"></div>
+<div class="bg-glow glow-b"></div>
+<div class="bg-glow glow-c"></div>
+
+<!-- Навигация -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">F</span>
+      <span class="logo-text">FesAuto<span class="accent">EVO</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#overview">Обзор</a>
+      <a href="#new">Новые</a>
+      <a href="#used">С пробегом</a>
+      <a href="#service">Сервис</a>
+      <a href="#tuning">Тюнинг</a>
+      <a href="#plan">План</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Хиро -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <span class="hero-badge"><span class="pulse-dot"></span> Аудит маркетинга · 12 месяцев · 07.08.2026</span>
+    <h1 class="hero-title">Маркетинг <span class="grad">FesAuto</span><br>под контролем</h1>
+    <p class="hero-sub">Презентация данных и план действий по 4 направлениям бизнеса: новые автомобили, автомобили с пробегом, автосервис и тюнинг.</p>
+    <div class="kpis" id="heroKpis"></div>
+    <a class="cta" href="#overview">Смотреть направления <span>↓</span></a>
+  </div>
+  <a class="scroll-hint" href="#overview"><span class="mouse"><i></i></span></a>
+</header>
+
+<!-- Обзор -->
+<section class="section" id="overview">
+  <div class="section-head reveal">
+    <span class="kicker">Обзор</span>
+    <h2>4 направления — 4 точки фокуса</h2>
+    <p>33 740 лидов в год, 3 357 продаж. Но 44% потока — мусор. Каждому направлению нужен свой план.</p>
+  </div>
+  <div class="dir-grid" id="dirGrid"></div>
+
+  <div class="panel reveal">
+    <h3 class="panel-title">Откуда приходят лиды (вся компания)</h3>
+    <div id="sourceBars"></div>
+  </div>
+</section>
+
+<!-- Блок 01: Новые автомобили -->
+<section class="section block" id="new">
+  <div class="block-head reveal">
+    <span class="block-num">01</span>
+    <h2>FesAuto — новые автомобили</h2>
+    <p>Основной поток лидов и продаж. 77% всего трафика компании.</p>
+  </div>
+  <div class="metrics" id="m-new"></div>
+  <div class="block-grid">
+    <div class="panel reveal">
+      <h3 class="panel-title">Из чего состоит поток</h3>
+      <div class="stack" id="stack-new"></div>
+      <ul class="legend" id="legend-new"></ul>
+    </div>
+    <div class="panel reveal">
+      <h3 class="panel-title warn-title">Проблемы</h3>
+      <ul class="problems" id="p-new"></ul>
+    </div>
+  </div>
+  <div class="panel plan-panel reveal">
+    <h3 class="panel-title">План действий</h3>
+    <ol class="plan" id="plan-new"></ol>
+  </div>
+</section>
+
+<!-- Блок 02: С пробегом -->
+<section class="section block" id="used">
+  <div class="block-head reveal">
+    <span class="block-num">02</span>
+    <h2>FesAuto — автомобили с пробегом</h2>
+    <p>Отдельная модель АСП Р263. Второй по объёму бюджет — 1,12 млн ₽/год.</p>
+  </div>
+  <div class="metrics" id="m-used"></div>
+  <div class="block-grid">
+    <div class="panel reveal">
+      <h3 class="panel-title">Из чего состоит поток</h3>
+      <div class="stack" id="stack-used"></div>
+      <ul class="legend" id="legend-used"></ul>
+    </div>
+    <div class="panel reveal">
+      <h3 class="panel-title warn-title">Проблемы</h3>
+      <ul class="problems" id="p-used"></ul>
+    </div>
+  </div>
+  <div class="panel plan-panel reveal">
+    <h3 class="panel-title">План действий</h3>
+    <ol class="plan" id="plan-used"></ol>
+  </div>
+</section>
+
+<!-- Блок 03: Сервис -->
+<section class="section block" id="service">
+  <div class="block-head reveal">
+    <span class="block-num">03</span>
+    <h2>FesService — автосервис</h2>
+    <p>Самый качественный канал: 21,2% конверсия лида в продажу.</p>
+  </div>
+  <div class="metrics" id="m-service"></div>
+  <div class="block-grid">
+    <div class="panel reveal">
+      <h3 class="panel-title">Из чего состоит поток</h3>
+      <div class="stack" id="stack-service"></div>
+      <ul class="legend" id="legend-service"></ul>
+    </div>
+    <div class="panel reveal">
+      <h3 class="panel-title warn-title">Проблемы</h3>
+      <ul class="problems" id="p-service"></ul>
+    </div>
+  </div>
+  <div class="panel plan-panel reveal">
+    <h3 class="panel-title">План действий</h3>
+    <ol class="plan" id="plan-service"></ol>
+  </div>
+</section>
+
+<!-- Блок 04: Тюнинг -->
+<section class="section block" id="tuning">
+  <div class="block-head reveal">
+    <span class="block-num">04</span>
+    <h2>PRO-Tuning — тюнинг</h2>
+    <p>Топ-5 в 2ГИС (76 919 показов), но почти нулевые продажи.</p>
+  </div>
+  <div class="metrics" id="m-tuning"></div>
+  <div class="block-grid">
+    <div class="panel reveal">
+      <h3 class="panel-title">Из чего состоит поток</h3>
+      <div class="stack" id="stack-tuning"></div>
+      <ul class="legend" id="legend-tuning"></ul>
+    </div>
+    <div class="panel reveal">
+      <h3 class="panel-title warn-title">Проблемы</h3>
+      <ul class="problems" id="p-tuning"></ul>
+    </div>
+  </div>
+  <div class="panel plan-panel reveal">
+    <h3 class="panel-title">План действий</h3>
+    <ol class="plan" id="plan-tuning"></ol>
+  </div>
+</section>
+
+<!-- Сводный план -->
+<section class="section" id="plan">
+  <div class="section-head reveal">
+    <span class="kicker">План</span>
+    <h2>Приоритеты на год</h2>
+    <p>5 шагов с максимальным эффектом по всем направлениям сразу.</p>
+  </div>
+  <div class="plan-timeline" id="timeline"></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="logo-text">FesAuto<span class="accent">EVO</span></span>
+    <p>Аудит маркетинга · подготовлен 07.08.2026 · данные: Битрикс24, Яндекс.Метрика, Авито, Дром, 2ГИС, АвтоРу</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
